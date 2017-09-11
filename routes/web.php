@@ -3,7 +3,8 @@
 Auth::routes();
 
 Route::get('/', function() {
-	return view('messages.hello', ['name' => 'Hjörtur Freyr']);
+	$name = "Hjörtur Freyr";
+	return view('messages.hello', compact($name));
 });
 
 Route::get('/threads', function() {
