@@ -4,6 +4,6 @@
 	<title>Hjörtur Freyr | FS Forum</title>
 </head>
 <body>
-	<p>Hello, i'm am Hjörtur</p>
+	<h1>This is greeting number {{ $id }} with {{ $count }} replies.</h1>
 </body>
 </html>
