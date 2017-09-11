@@ -2,6 +2,10 @@
 
 Auth::routes();
 
+Route::get('/', function() {
+	return view('messages.greeting');
+});
+
 Route::get('/threads', function() {
 	return view('threads.index');
 });
