@@ -3,7 +3,7 @@
 Auth::routes();
 
 Route::get('/', function() {
-	return view('messages.greeting');
+	return view('messages.hello', ['name' => 'Hjörtur Freyr']);
 });
 
 Route::get('/threads', function() {
