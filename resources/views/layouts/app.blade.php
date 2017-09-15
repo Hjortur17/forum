@@ -36,7 +36,9 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        &nbsp;
+                        <!-- &nbsp; -->
+                        <li><a href="/threads">All threads</a></li>
+                        <li><a href="/threads/create">Create thread</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
