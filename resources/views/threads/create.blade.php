@@ -21,6 +21,13 @@
                             <button class="btn btn-primary">Publish</button>
                         </div>
                     </form>
+                     @foreach ($countries as $count)
+                        @if ($count != 'Írland')
+                            <h1>{{ $count }}</h1>
+                        @else
+                            <p>{{ $count }}</p>
+                        @endif
+                    @endforeach
                 </div>
             </div>
         </div>
