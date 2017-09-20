@@ -17,9 +17,15 @@ class ThreadsController extends Controller
 
 	public function create()
 	{
-		$countries = ['Ísland', 'Ísland', 'Írland', 'Ísland', 'Írland'];
+		$tasks = [
+			['title' => 'Fara út í búð', 'complete' => 'true', 'anchor' => 'http://www.bonus.is'], 
+			['title' => 'Þrífa bílinn', 'complete' => 'true', 'anchor' => 'http://www.geysir.is'], 
+			['title' => 'Klára heimasíðuna', 'complete' => 'false', 'anchor' => 'https://www.hjorturfreyr.com'], 
+			['title' => 'Kaupa egg', 'complete' => 'true', 'anchor' => 'http://www.netto.is'], 
+			['title' => 'Hanna leikjasíðu', 'complete' => 'false', 'anchor' => 'http://www.gamespot.com']
+		];
 
-		return view('threads.create', compact('countries'));
+		return view('threads.create', compact('tasks'));
 	}
 
 	public function show($id)

@@ -21,13 +21,27 @@
                             <button class="btn btn-primary">Publish</button>
                         </div>
                     </form>
-                     @foreach ($countries as $count)
-                        @if ($count != 'Írland')
-                            <h1>{{ $count }}</h1>
-                        @else
-                            <p>{{ $count }}</p>
-                        @endif
-                    @endforeach
+                    <ul>
+                        @foreach ($tasks as $task)
+                            @if($task['complete'] === 'true')
+                                <li>
+                                    <a href="{{ $task['anchor'] }}">
+                                        <s style="margin: 0px">
+                                            {{ $task['title'] }}
+                                        </s>
+                                    </a>
+                                </li>
+                            @else
+                                <li>
+                                    <a href='$task["anchor"]'>
+                                        <p style="margin: 0px">
+                                            {{ $task['title'] }}
+                                        </p>
+                                    </a>
+                                </li>
+                            @endif
+                        @endforeach
+                    </ul>
                 </div>
             </div>
         </div>
