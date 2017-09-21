@@ -1,0 +1,26 @@
+@extends('layouts.app')
+
+@section('content')
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-11 col-lg-offset-1">
+                <div class="col-lg-11">
+                    <h1>Hjörtur Freyr Lárusson</h1>
+                    <p>Meðlimur í 2 mánuði</p>
+                </div>
+                <hr>
+                <div class="col-lg-7">
+                    <h1>Hello, my name is Hjörtur Freyr</h1>
+                </div>
+                <div class="col-md-4">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>    
+            </div>
+        </div>
+    </div>
+@endsection
