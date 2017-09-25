@@ -8,7 +8,8 @@
                 <div class="panel-heading">Forum Threads</div>
 
                 <div class="panel-body">
-                    <form>
+                    <form method="POST" action="/threads">
+                        {{ csrf_field() }}
                         <div class="form-group">
                             <label>Title: </label>
                             <input type="text" name="title" class="form-control">

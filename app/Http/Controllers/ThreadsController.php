@@ -9,7 +9,7 @@ class ThreadsController extends Controller
 	{
 		$threads = [
 			['title' => 'Titill A', 'body' => 'Þetta er A'],
-			['title' => 'Titill b', 'body' => 'Þetta er B']
+			['title' => 'Titill B', 'body' => 'Þetta er B']
 		];
 
 		return view('threads.index', compact('threads'));
@@ -31,5 +31,10 @@ class ThreadsController extends Controller
 	public function show($id)
 	{
 		return view('threads.show');
+	}
+
+	public function store()
+	{
+		dd('Store Method');
 	}
 }

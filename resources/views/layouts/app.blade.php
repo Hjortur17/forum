@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,500" rel="stylesheet">
 </head>
 <body>
     <div id="app">

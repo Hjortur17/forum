@@ -1,25 +1,51 @@
 @extends('layouts.app')
 
-@section('content')
+@section ('content')
     <div class="container">
         <div class="row">
-            <div class="col-lg-11 col-lg-offset-1">
-                <div class="col-lg-11">
-                    <h1>Hjörtur Freyr Lárusson</h1>
-                    <p>Meðlimur í 2 mánuði</p>
+            <div class="col-md-12">
+                <div class="container">
+                    <div>
+                        <h1>Hjörtur Freyr Lárusson <span>Meðlimur í 5 mánuði</span></h1>
+                        <hr>
+                    </div>
                 </div>
-                <hr>
-                <div class="col-lg-7">
-                    <h1>Hello, my name is Hjörtur Freyr</h1>
+                <div class="col-md-8">
+                    @foreach ($threads as $thread)
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="panel-body">
+                                    <article>
+                                        <div>
+                                            <p><strong>{{ $thread['fullname'] }}</strong> publish <span class="blue_link">{{ $thread['text-head'] }}</span></p>
+                                        </div>
+                                        <hr>
+                                        <div class="body">
+                                            <p>{{ $thread['text-body'] }}</p>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
                 <div class="col-md-4">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="panel-body">
+                                <article>
+                                    <div>
+                                        <h2>Nafn</h2>
+                                        <h4>Hjörtur Freyr Lárusson</h4>
+                                        <h2>Netfang</h2>
+                                        <h4><span class="blue_link">hjorturfreyr@hjorturfreyr.com</span></h4>
+                                        <h2>Fjöldi þráða: <span class="blue_link">14</span></h2>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

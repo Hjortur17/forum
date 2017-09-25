@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@charset "UTF-8";
+@charset "UTF-8";
 
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
@@ -8350,7 +8350,41 @@ button.close {
   }
 }
 
+/* VARIBLES */
+
 body {
-  background-color: pink;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  background: #f5f5f5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
+/* PROFILE STYLE */
+
+h1 span {
+  font-size: 20px;
+  font-weight: 300;
+  color: #3C474B;
+}
+
+article p {
+  font-size: 17px;
+}
+
+.blue_link {
+  color: #4F7CAC;
+}
+
+.blue_link:hover {
+  color: #2B4162;
+  cursor: pointer;
 }
 
