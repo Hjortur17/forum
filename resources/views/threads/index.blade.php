@@ -12,11 +12,11 @@
                         <article>
                             <div>
                                 <h4>
-                                    {{ $thread['title'] }}
+                                    {{ $thread->title }}
                                 </h4>
                             </div>
                             <div class="body">
-                                {{ $thread['body'] }}
+                                {{ $thread->body }}
                             </div>
                         </article>
                         <hr>

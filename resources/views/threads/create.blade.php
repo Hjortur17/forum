@@ -16,33 +16,12 @@
                         </div>
                         <div class="form-group">
                             <label>Body: </label>
-                            <textarea type="text" name="title" class="form-control" rows="8"></textarea>
+                            <textarea type="text" name="body" class="form-control" rows="8"></textarea>
                         </div>
                         <div class="form-group">
                             <button class="btn btn-primary">Publish</button>
                         </div>
                     </form>
-                    <ul>
-                        @foreach ($tasks as $task)
-                            @if($task['complete'] === 'true')
-                                <li>
-                                    <a href="{{ $task['anchor'] }}">
-                                        <s style="margin: 0px">
-                                            {{ $task['title'] }}
-                                        </s>
-                                    </a>
-                                </li>
-                            @else
-                                <li>
-                                    <a href='$task["anchor"]'>
-                                        <p style="margin: 0px">
-                                            {{ $task['title'] }}
-                                        </p>
-                                    </a>
-                                </li>
-                            @endif
-                        @endforeach
-                    </ul>
                 </div>
             </div>
         </div>

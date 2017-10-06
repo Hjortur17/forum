@@ -2,15 +2,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Thread;
 
 class ThreadsController extends Controller
 {
 	public function index()
 	{
-		$threads = [
-			['title' => 'Titill A', 'body' => 'Þetta er A'],
-			['title' => 'Titill B', 'body' => 'Þetta er B']
-		];
+		$threads = Thread::all();
 
 		return view('threads.index', compact('threads'));
 	}
@@ -33,8 +31,14 @@ class ThreadsController extends Controller
 		return view('threads.show');
 	}
 
-	public function store()
+	public function store(Request $request)
 	{
-		dd('Store Method');
+		$thread = new Thread;
+		$thread->title = $request->title;
+		$thread->body = $request->body;
+		$thread->user_id = 1;
+		$thread->save();
+
+		return redirect('/threads');
 	}
 }

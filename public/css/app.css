@@ -8379,6 +8379,12 @@ article p {
   font-size: 17px;
 }
 
+textarea {
+  resize: vertical;
+  max-height: 400px;
+  min-height: 150px;
+}
+
 .blue_link {
   color: #4F7CAC;
 }
