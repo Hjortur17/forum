@@ -8398,3 +8398,16 @@ h5 {
   margin-bottom: 20px;
 }
 
+/* Artical */
+
+article a {
+  color: #18587A;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+article a:hover {
+  color: #FC624D;
+  text-decoration: none;
+}
+

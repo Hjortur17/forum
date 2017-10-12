@@ -10,29 +10,28 @@ use App\Thread;
 
 class ThreadsController extends Controller
 {
+	public function __construct()
+	{
+		$this->middleware('auth')->only('create', 'store');
+	}
+
 	public function index()
 	{
-		$threads = Thread::all();
+		$threads = Thread::latest()->get();
 
 		return view('threads.index', compact('threads'));
 	}
 
 	public function create()
 	{
-		$tasks = [
-			['title' => 'Fara út í búð', 'complete' => 'true', 'anchor' => 'http://www.bonus.is'], 
-			['title' => 'Þrífa bílinn', 'complete' => 'true', 'anchor' => 'http://www.geysir.is'], 
-			['title' => 'Klára heimasíðuna', 'complete' => 'false', 'anchor' => 'https://www.hjorturfreyr.com'], 
-			['title' => 'Kaupa egg', 'complete' => 'true', 'anchor' => 'http://www.netto.is'], 
-			['title' => 'Hanna leikjasíðu', 'complete' => 'false', 'anchor' => 'http://www.gamespot.com']
-		];
-
-		return view('threads.create', compact('tasks'));
+		return view('threads.create');
 	}
 
 	public function show($id)
 	{
-		return view('threads.show');
+		$thread = Thread::find($id);
+
+		return view('threads.show', compact('thread'));
 	}
 
 	public function store(Request $request)

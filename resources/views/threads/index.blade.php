@@ -12,11 +12,11 @@
                     <div class="panel-body">
                         <article>
                             <div>
-                                <h4>{{ $thread->title }}</h4>
+                                <a href="/threads/{{ $thread->id}}">
+                                    <h4>{{ $thread->title }}</h4>
+                                </a>
                             </div>
-                            <div class="body">
-                                {{ $thread->body }}
-                            </div>
+                            <div class="body">{{ $thread->body }}</div>
                         </article>
                     </div>
                 </div>
